@@ -6,14 +6,7 @@ pipeline{
     
     agent none
         stages{
-            stage('checkout'){
-                agent any
-                steps{
-                    git 'https://github.com/sivarasan777/DevOpsClassCodes.git'
-                }
-                
-            }
-            stage('compile'){
+           stage('compile'){
                 agent any
                 steps{
                     sh 'mvn compile'
